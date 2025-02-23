@@ -1,0 +1,81 @@
+{
+ "projectInfo": {
+  "name": "mplsvpn_optiona",
+  "path": "mplsvpn_optiona",
+  "visibility": "2",
+  "introduction": "",
+  "label": []
+ },
+ "deviceInfoList": [
+  {
+   "resourceName": "PE1",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\PE1.cfg"
+  },
+  {
+   "resourceName": "P1",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\P1.cfg"
+  },
+  {
+   "resourceName": "ASBR1",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\ASBR1.cfg"
+  },
+  {
+   "resourceName": "ASBR2",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\ASBR2.cfg"
+  },
+  {
+   "resourceName": "P2",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\P2.cfg"
+  },
+  {
+   "resourceName": "PE2",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\PE2.cfg"
+  },
+  {
+   "resourceName": "CE1",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\CE1.cfg"
+  },
+  {
+   "resourceName": "CE3",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\CE3.cfg"
+  },
+  {
+   "resourceName": "CE2",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\CE2.cfg"
+  },
+  {
+   "resourceName": "CE4",
+   "resourceCategory": "路由器",
+   "resourceModel": "VSR-88",
+   "resourceVersion": "CMW7.1.075-R7953P11",
+   "configPath": "DeviceConfig\\CE4.cfg"
+  }
+ ]
+}
