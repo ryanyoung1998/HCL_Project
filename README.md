@@ -52,3 +52,27 @@ HCL_Project/
 **实验拓扑**：
 
 ![OptionB实验拓扑][./mplsvpn_optionb_complated/mplsvpn_optionb.png]
+
+
+### MPLS 跨域 VPN 挖坑清单
+- OptionA：
+1. ASBR2 未在 BGP VPN 实例中激活对等体
+2. PE1 的 VPN 实例配置中，RT 配置与 ASBR1 的 RT 配置不匹配
+3. P2 的 OSPF 配置中，区域号配置错误
+4. PE2 的接口配置中，绑定 VPN 实例配置错误
+5. ASBR1 的 BGP 配置中， 未在 VPNv4 地址簇激活对等体
+
+- OptionB：
+1. ASBR1 未取消对 VPNv4 路由进行 VPN Tag 过滤
+2. PE1 VPN 实例配置与 PE2 不匹配
+3. P2 OSPF 配置不完整
+4. PE2 接口绑定 VPN 实例配置错误
+5. CE4 未将业务地址通告至 BGP 中
+6. ASBR2 互联接口未启用 MPLS
+
+- OptionC：
+1. ASBR1 peer 10.0.0.1 未使能 label-route-capability
+2. ASBR2 route-policy 未应用 mpls-label
+3. PE1 peer 10.0.0.6 未配置 ebgp-max-hop
+4. PE2 vpn-instance B 未引入 vpn-target 100:2
+5. CE4 ipv4 地址簇未通告 Loopback
