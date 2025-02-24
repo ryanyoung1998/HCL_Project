@@ -1,8 +1,0 @@
-MPLS VPN 跨域 OptionB
-
-1. ASBR1 未取消对 VPNv4 路由进行 VPN Tag 过滤。
-2. PE1 VPN 实例配置与 PE2 不匹配。
-3. P2 OSPF 配置不完整。
-4. PE2 接口绑定 VPN 实例配置错误。
-5. CE4 未将业务地址通告至 BGP 中。
-6. ASBR2 互联接口未启用 MPLS。
