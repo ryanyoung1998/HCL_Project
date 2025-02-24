@@ -44,35 +44,35 @@ HCL_Project/
 
 **实验拓扑**：
 
-![OptionA实验拓扑][./mplsvpn_optiona_complated/mplsvpn_optiona.png]
+![OptionA实验拓扑](./mplsvpn_optiona/mplsvpn_optiona.png)
 
 ### 2. MPLS跨域OptionB实验
 **实验目的**：理解MPLS跨域OptionB的工作原理，验证MPLS跨域OptionB的配置与实现。
 
 **实验拓扑**：
 
-![OptionB实验拓扑][./mplsvpn_optionb_complated/mplsvpn_optionb.png]
+![OptionB实验拓扑](./mplsvpn_optionb/mplsvpn_optionb.png)
 
 ### 3. MPLS跨域OptionC实验
 **实验目的**：理解MPLS跨域OptionC的工作原理，验证MPLS跨域OptionC的配置与实现。
 
 **实验拓扑**：
 
-![OptionC实验拓扑][./mplsvpn_optionc_complated/mplsvpn_optionc.png]
+![OptionC实验拓扑](./mplsvpn_optionc/mplsvpn_optionc.png)
 
 
 
 ---
 
-## MPLS 跨域 VPN 挖坑清单
-- OptionA：
+## 挖坑清单
+- **OptionA：**
 1. ASBR2 未在 BGP VPN 实例中激活对等体
 2. PE1 的 VPN 实例配置中，RT 配置与 ASBR1 的 RT 配置不匹配
 3. P2 的 OSPF 配置中，区域号配置错误
 4. PE2 的接口配置中，绑定 VPN 实例配置错误
 5. ASBR1 的 BGP 配置中， 未在 VPNv4 地址簇激活对等体
 
-- OptionB：
+- **OptionB：**
 1. ASBR1 未取消对 VPNv4 路由进行 VPN Tag 过滤
 2. PE1 VPN 实例配置与 PE2 不匹配
 3. P2 OSPF 配置不完整
@@ -80,7 +80,7 @@ HCL_Project/
 5. CE4 未将业务地址通告至 BGP 中
 6. ASBR2 互联接口未启用 MPLS
 
-- OptionC：
+- **OptionC：**
 1. ASBR1 peer 10.0.0.1 未使能 label-route-capability
 2. ASBR2 route-policy 未应用 mpls-label
 3. PE1 peer 10.0.0.6 未配置 ebgp-max-hop
