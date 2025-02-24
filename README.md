@@ -54,7 +54,9 @@ HCL_Project/
 ![OptionB实验拓扑][./mplsvpn_optionb_complated/mplsvpn_optionb.png]
 
 
-### MPLS 跨域 VPN 挖坑清单
+---
+
+## MPLS 跨域 VPN 挖坑清单
 - OptionA：
 1. ASBR2 未在 BGP VPN 实例中激活对等体
 2. PE1 的 VPN 实例配置中，RT 配置与 ASBR1 的 RT 配置不匹配
