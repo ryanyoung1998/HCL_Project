@@ -4,7 +4,7 @@
 本项目是基于 **H3C Cloud Lab** 工具构建的网络实验集合，旨在模拟真实网络场景，验证 H3C 设备（如交换机、路由器）的配置与协议实现。实验涵盖以下方向：
 - **基础网络配置**（VLAN、静态路由、DHCP）-未完成
 - **动态路由协议**（OSPF、BGP）-未完成
-- **MPLS VPN**（跨域OptionA/OptionB）**已完成**
+- **MPLS VPN**（跨域OptionA/OptionB/OptionC）**已完成**
 - **安全特性**（ACL、端口安全）-未完成
 - **高级功能**（QoS、VRRP）-未完成
 
@@ -52,6 +52,14 @@ HCL_Project/
 **实验拓扑**：
 
 ![OptionB实验拓扑][./mplsvpn_optionb_complated/mplsvpn_optionb.png]
+
+### 2. MPLS跨域OptionC实验
+**实验目的**：理解MPLS跨域OptionC的工作原理，验证MPLS跨域OptionC的配置与实现。
+
+**实验拓扑**：
+
+![OptionC实验拓扑][./mplsvpn_optionc_complated/mplsvpn_optionc.png]
+
 
 
 ---
