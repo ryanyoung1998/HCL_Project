@@ -53,7 +53,7 @@ HCL_Project/
 
 ![OptionB实验拓扑][./mplsvpn_optionb_complated/mplsvpn_optionb.png]
 
-### 2. MPLS跨域OptionC实验
+### 3. MPLS跨域OptionC实验
 **实验目的**：理解MPLS跨域OptionC的工作原理，验证MPLS跨域OptionC的配置与实现。
 
 **实验拓扑**：
