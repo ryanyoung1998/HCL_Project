@@ -1,0 +1,336 @@
+version = 5.10.3
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\administrator\hcl\projects\mpls_vpn_template\working
+    udp = 10000
+    [[VSR-88 CE1]]
+        device_id = 7
+        bridge_mac = 8e-d1-21-84-07-00
+        slot0 = MSR36 768
+        GE_0/1 = PE1 GE_0/1
+        x = -601.0
+        y = -375.0
+        z = 5.0
+    [[VSR-88 CE3]]
+        device_id = 8
+        bridge_mac = 8e-d1-3a-62-08-00
+        slot0 = MSR36 768
+        GE_0/2 = PE1 GE_0/2
+        x = -601.0
+        y = -25.0
+        z = 5.0
+    [[VSR-88 CE2]]
+        device_id = 9
+        bridge_mac = 8e-d1-4c-f3-09-00
+        slot0 = MSR36 768
+        GE_0/1 = PE2 GE_0/1
+        x = 298.0
+        y = -375.0
+        z = 5.0
+    [[VSR-88 CE4]]
+        device_id = 10
+        bridge_mac = 8e-d1-56-43-0a-00
+        slot0 = MSR36 768
+        GE_0/2 = PE2 GE_0/2
+        x = 298.0
+        y = -25.0
+        z = 5.0
+    [[VSR-88 PE1]]
+        device_id = 1
+        bridge_mac = 8e-d0-84-9e-01-00
+        slot0 = MSR36 768
+        GE_0/0 = P1 GE_0/1
+        GE_0/1 = CE1 GE_0/1
+        GE_0/2 = CE3 GE_0/2
+        x = -601.0
+        y = -199.0
+        z = 5.0
+    [[VSR-88 P1]]
+        device_id = 2
+        bridge_mac = 8e-d0-97-7b-02-00
+        slot0 = MSR36 768
+        GE_0/1 = PE1 GE_0/0
+        GE_0/0 = ASBR1 GE_0/1
+        x = -428.0
+        y = -199.0
+        z = 5.0
+    [[VSR-88 ASBR1]]
+        device_id = 3
+        bridge_mac = 8e-d0-a8-68-03-00
+        slot0 = MSR36 768
+        GE_0/1 = P1 GE_0/0
+        GE_0/0 = ASBR2 GE_0/0
+        x = -252.0
+        y = -199.0
+        z = 5.0
+    [[VSR-88 ASBR2]]
+        device_id = 4
+        bridge_mac = 8e-d0-c8-b3-04-00
+        slot0 = MSR36 768
+        GE_0/0 = ASBR1 GE_0/0
+        GE_0/1 = P2 GE_0/0
+        x = -50.0
+        y = -199.0
+        z = 5.0
+    [[VSR-88 P2]]
+        device_id = 5
+        bridge_mac = 8e-d0-d6-81-05-00
+        slot0 = MSR36 768
+        GE_0/0 = ASBR2 GE_0/1
+        GE_0/1 = PE2 GE_0/0
+        x = 124.0
+        y = -199.0
+        z = 5.0
+    [[VSR-88 PE2]]
+        device_id = 6
+        bridge_mac = 8e-d1-06-e3-06-00
+        slot0 = MSR36 768
+        GE_0/0 = P2 GE_0/1
+        GE_0/1 = CE2 GE_0/1
+        GE_0/2 = CE4 GE_0/2
+        x = 298.0
+        y = -199.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.3
+    m22 = 1.3
+    [[NOTE 1]]
+        text = "18"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 320.61538461538464
+        y = -95.5
+        z = 6.0
+    [[NOTE 2]]
+        text = "17"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 320.61538461538464
+        y = -275.49999999999994
+        z = 6.0
+    [[NOTE 3]]
+        text = "11"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -577.8461538461537
+        y = -97.03846153846155
+        z = 6.0
+    [[NOTE 4]]
+        text = "10"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -577.076923076923
+        y = -277.80769230769226
+        z = 6.0
+    [[NOTE 5]]
+        text = "16"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 227.53846153846152
+        y = -173.96153846153845
+        z = 6.0
+    [[NOTE 6]]
+        text = "15"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 43.692307692307686
+        y = -173.96153846153845
+        z = 6.0
+    [[NOTE 7]]
+        text = "14"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -144.0
+        y = -173.19230769230768
+        z = 6.0
+    [[NOTE 8]]
+        text = "13"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -331.6923076923077
+        y = -174.73076923076923
+        z = 6.0
+    [[NOTE 9]]
+        text = "12"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -512.4615384615383
+        y = -173.1923076923077
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        interface = VSR-88_10 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = -25.0
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        interface = VSR-88_9 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = 55.0
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = VSR-88_8 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = -25.0
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        interface = VSR-88_7 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = 55.0
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        interface = VSR-88_6 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = 55.0
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        interface = VSR-88_6 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = -25.0
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/0"
+        interface = VSR-88_6 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -53.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/1"
+        interface = VSR-88_5 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 33.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/0"
+        interface = VSR-88_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -53.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 19]]
+        text = "GE_0/1"
+        interface = VSR-88_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 33.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_0/0"
+        interface = VSR-88_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -60.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_0/0"
+        interface = VSR-88_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 40.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/1"
+        interface = VSR-88_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -54.0
+        y = 15.0
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/0"
+        interface = VSR-88_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 34.0
+        y = 15.0
+        z = 6.0
+    [[NOTE 24]]
+        text = "GE_0/1"
+        interface = VSR-88_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -53.25
+        y = 15.0
+        z = 6.0
+    [[NOTE 25]]
+        text = "GE_0/2"
+        interface = VSR-88_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = 55.0
+        z = 6.0
+    [[NOTE 26]]
+        text = "GE_0/1"
+        interface = VSR-88_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = -25.0
+        z = 6.0
+    [[NOTE 27]]
+        text = "GE_0/0"
+        interface = VSR-88_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 33.25
+        y = 15.0
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 150.0
+        height = 169.0
+        fill_color = "#d5ffc2"
+        border_color = "#00e770"
+        border_style = 2
+        x = 248.0
+        y = -93.0
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        width = 151.0
+        height = 170.0
+        fill_color = "#ddffb7"
+        border_color = "#00d300"
+        border_style = 2
+        x = -652.0
+        y = -94.0
+        z = 3.0
+    [[SHAPE 3]]
+        type = rectangle
+        width = 147.0
+        height = 171.0
+        fill_color = "#fff89d"
+        border_color = "#ffec1e"
+        border_style = 2
+        x = 251.0
+        y = -423.0
+        z = 3.0
+    [[SHAPE 4]]
+        type = rectangle
+        width = 150.0
+        height = 174.24905682538585
+        fill_color = "#fffab4"
+        border_color = "#b8b800"
+        border_style = 2
+        x = -651.0
+        y = -425.0
+        z = 3.0
+    [[SHAPE 5]]
+        type = rectangle
+        width = 523.0
+        height = 151.03130170851193
+        fill_color = "#e1beff"
+        border_color = "#9664d3"
+        border_style = 2
+        x = -125.00000000000001
+        y = -248.03130170851193
+        z = 3.0
+    [[SHAPE 6]]
+        type = rectangle
+        width = 522.0
+        height = 151.0
+        fill_color = "#d0d2ff"
+        border_color = "#7a87d1"
+        border_style = 2
+        x = -651.0
+        y = -248.0
+        z = 3.0
