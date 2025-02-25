@@ -1,0 +1,424 @@
+version = 5.10.3
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\administrator\desktop\hcl_project\mplsvpn_optionc\working
+    udp = 10000
+    [[VSR-88 PE1]]
+        device_id = 1
+        bridge_mac = 88-bf-ea-55-01-00
+        slot0 = MSR36 768
+        GE_0/0 = P1 GE_0/0
+        GE_0/1 = CE1 GE_0/1
+        GE_0/2 = CE3 GE_0/2
+        x = -624.0
+        y = -174.0
+        z = 5.0
+    [[VSR-88 P1]]
+        device_id = 2
+        bridge_mac = 88-c0-16-97-02-00
+        slot0 = MSR36 768
+        GE_0/1 = ASBR1 GE_0/1
+        GE_0/0 = PE1 GE_0/0
+        x = -450.0
+        y = -174.0
+        z = 5.0
+    [[VSR-88 ASBR1]]
+        device_id = 3
+        bridge_mac = 88-c0-23-5b-03-00
+        slot0 = MSR36 768
+        GE_0/0 = ASBR2 GE_0/0
+        GE_0/1 = P1 GE_0/1
+        x = -279.0
+        y = -174.0
+        z = 5.0
+    [[VSR-88 ASBR2]]
+        device_id = 4
+        bridge_mac = 88-c0-2f-ec-04-00
+        slot0 = MSR36 768
+        GE_0/0 = ASBR1 GE_0/0
+        GE_0/1 = P2 GE_0/1
+        x = -73.0
+        y = -174.0
+        z = 5.0
+    [[VSR-88 P2]]
+        device_id = 5
+        bridge_mac = 88-c0-3b-93-05-00
+        slot0 = MSR36 768
+        GE_0/0 = PE2 GE_0/0
+        GE_0/1 = ASBR2 GE_0/1
+        x = 97.0
+        y = -174.0
+        z = 5.0
+    [[VSR-88 PE2]]
+        device_id = 6
+        bridge_mac = 88-c0-46-f9-06-00
+        slot0 = MSR36 768
+        GE_0/0 = P2 GE_0/0
+        GE_0/1 = CE2 GE_0/1
+        GE_0/2 = CE4 GE_0/2
+        x = 275.0
+        y = -174.0
+        z = 5.0
+    [[VSR-88 CE1]]
+        device_id = 7
+        bridge_mac = 88-c0-70-b4-07-00
+        slot0 = MSR36 768
+        GE_0/1 = PE1 GE_0/1
+        x = -624.0
+        y = -348.0
+        z = 5.0
+    [[VSR-88 CE3]]
+        device_id = 8
+        bridge_mac = 88-c0-85-04-08-00
+        slot0 = MSR36 768
+        GE_0/2 = PE1 GE_0/2
+        x = -624.0
+        y = 3.0
+        z = 5.0
+    [[VSR-88 CE2]]
+        device_id = 9
+        bridge_mac = 88-c0-99-45-09-00
+        slot0 = MSR36 768
+        GE_0/1 = PE2 GE_0/1
+        x = 275.0
+        y = -353.0
+        z = 5.0
+    [[VSR-88 CE4]]
+        device_id = 10
+        bridge_mac = 88-c0-aa-54-0a-00
+        slot0 = MSR36 768
+        GE_0/2 = PE2 GE_0/2
+        x = 275.0
+        y = -1.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.3
+    m22 = 1.3
+    [[NOTE 1]]
+        text = "配置步骤：\n1. IGP(OSPF)\n2. MPLS+LDP\n3. IBGP+EBGP\n4. 多跳 MP-EBGP\n5. label-route-capability\n6. VPN-INSTANCE"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -71.6923076923077
+        y = -419.3461538461539
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.1.64.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#0000ff"
+        x = 236.7692307692306
+        y = -73.96153846153845
+        z = 6.0
+    [[NOTE 3]]
+        text = "10.1.62.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#005500"
+        x = 241.3846153846153
+        y = -253.19230769230765
+        z = 6.0
+    [[NOTE 4]]
+        text = "10.0.56.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#ffaa00"
+        x = 153.6923076923077
+        y = -141.6538461538462
+        z = 6.0
+    [[NOTE 5]]
+        text = "10.0.45.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#ffaa00"
+        x = -21.692307692307686
+        y = -142.42307692307685
+        z = 6.0
+    [[NOTE 6]]
+        text = "10.0.34.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#c6753b"
+        x = -211.69230769230768
+        y = -142.42307692307696
+        z = 6.0
+    [[NOTE 7]]
+        text = "10.0.23.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#ff557f"
+        x = -395.5384615384614
+        y = -140.88461538461536
+        z = 6.0
+    [[NOTE 8]]
+        text = "10.0.12.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#ff557f"
+        x = -568.6153846153845
+        y = -140.88461538461536
+        z = 6.0
+    [[NOTE 9]]
+        text = "10.1.13.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#0000ff"
+        x = -656.3076923076922
+        y = -70.11538461538461
+        z = 6.0
+    [[NOTE 10]]
+        text = "10.1.11.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#005500"
+        x = -655.5384615384615
+        y = -253.19230769230765
+        z = 6.0
+    [[NOTE 11]]
+        text = ""
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -410.9230769230769
+        y = -53.96153846153846
+        z = 6.0
+    [[NOTE 12]]
+        text = "AS 4"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#00aaff"
+        x = 275.23076923076917
+        y = 69.11538461538464
+        z = 6.0
+    [[NOTE 13]]
+        text = "AS 3"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#00aaff"
+        x = -623.230769230769
+        y = 69.11538461538464
+        z = 6.0
+    [[NOTE 14]]
+        text = "AS 2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#00aa7f"
+        x = 275.23076923076917
+        y = -394.73076923076934
+        z = 6.0
+    [[NOTE 15]]
+        text = "AS 1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#00aa00"
+        x = -623.230769230769
+        y = -394.73076923076934
+        z = 6.0
+    [[NOTE 16]]
+        text = ""
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -523.2307692307692
+        y = -213.96153846153845
+        z = 6.0
+    [[NOTE 17]]
+        text = "组网说明：\nAS100 和 AS200 内部 IGP 协议是 OSPF\nPE1 <=> ASBR1 是 IBGP 对等体\nASBR2 <=> PE2 是 IBGP 对等体\nASBR1 <=> ASBR2 是 EBGP 对等体\nPE1 <=> PE2 是多跳 MP-EBGP 对等体\nPE1 <=> PE2 之间通过 ASBR1、ASBR2 传递 BGP LSP\nPE* <=> CE* 是 EBGP 对等体"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -477.8461538461538
+        y = -56.26923076923077
+        z = 6.0
+    [[NOTE 18]]
+        text = "地址规划：\nLoopback:10.0.0.X/32 (CE除外)\n公网互联：10.0.AB.X/24\n私网互联：10.1.AB.X/24\n私网地址：10.1.1.X/32 (CE的Loopback)"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -480.1538461538461
+        y = -377.03846153846143
+        z = 6.0
+    [[NOTE 19]]
+        text = "EBGP"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#aa5500"
+        x = -180.1538461538462
+        y = -177.80769230769232
+        z = 6.0
+    [[NOTE 20]]
+        text = "AS 200   IBGP"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#ff6803"
+        x = 58.30769230769235
+        y = -203.96153846153845
+        z = 6.0
+    [[NOTE 21]]
+        text = "AS 100   IBGP"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        color = "#ff0000"
+        x = -493.2307692307693
+        y = -207.8076923076922
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/2"
+        interface = VSR-88_10 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = -25.0
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/1"
+        interface = VSR-88_9 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = 55.0
+        z = 6.0
+    [[NOTE 24]]
+        text = "GE_0/2"
+        interface = VSR-88_8 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = -25.0
+        z = 6.0
+    [[NOTE 25]]
+        text = "GE_0/1"
+        interface = VSR-88_7 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = 55.0
+        z = 6.0
+    [[NOTE 26]]
+        text = "GE_0/2"
+        interface = VSR-88_6 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = 55.0
+        z = 6.0
+    [[NOTE 27]]
+        text = "GE_0/1"
+        interface = VSR-88_6 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = -25.0
+        z = 6.0
+    [[NOTE 28]]
+        text = "GE_0/0"
+        interface = VSR-88_6 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -54.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 29]]
+        text = "GE_0/1"
+        interface = VSR-88_5 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -52.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 30]]
+        text = "GE_0/0"
+        interface = VSR-88_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 34.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 31]]
+        text = "GE_0/1"
+        interface = VSR-88_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 32.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 32]]
+        text = "GE_0/0"
+        interface = VSR-88_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -61.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 33]]
+        text = "GE_0/1"
+        interface = VSR-88_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -52.75
+        y = 15.0
+        z = 6.0
+    [[NOTE 34]]
+        text = "GE_0/0"
+        interface = VSR-88_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 41.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 35]]
+        text = "GE_0/0"
+        interface = VSR-88_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -53.5
+        y = 15.0
+        z = 6.0
+    [[NOTE 36]]
+        text = "GE_0/1"
+        interface = VSR-88_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 32.75
+        y = 15.0
+        z = 6.0
+    [[NOTE 37]]
+        text = "GE_0/2"
+        interface = VSR-88_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = 55.0
+        z = 6.0
+    [[NOTE 38]]
+        text = "GE_0/1"
+        interface = VSR-88_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.0
+        y = -25.0
+        z = 6.0
+    [[NOTE 39]]
+        text = "GE_0/0"
+        interface = VSR-88_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 33.5
+        y = 15.0
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 149.0
+        height = 171.0
+        fill_color = "#a4f7ff"
+        border_color = "#00cae1"
+        border_style = 2
+        x = 224.0
+        y = -70.0
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        width = 150.0
+        height = 171.0769230769231
+        fill_color = "#c6ffd1"
+        border_color = "#3bbda7"
+        border_style = 2
+        x = 222.0
+        y = -398.0
+        z = 3.0
+    [[SHAPE 3]]
+        type = rectangle
+        width = 150.0
+        height = 173.0
+        fill_color = "#b5fff6"
+        border_color = "#00baba"
+        border_style = 2
+        x = -677.0
+        y = -70.0
+        z = 3.0
+    [[SHAPE 4]]
+        type = rectangle
+        width = 151.0
+        height = 172.0
+        fill_color = "#d4ffd3"
+        border_color = "#2ad521"
+        border_style = 2
+        x = -676.0
+        y = -397.0
+        z = 3.0
+    [[SHAPE 5]]
+        type = rectangle
+        width = 521.0
+        height = 148.0
+        fill_color = "#ffeba4"
+        border_color = "#ffaa00"
+        border_style = 2
+        x = -148.0
+        y = -222.0
+        z = 3.0
+    [[SHAPE 6]]
+        type = rectangle
+        width = 524.0
+        height = 147.0
+        fill_color = "#ffc2c2"
+        border_color = "#ff5a5a"
+        border_style = 2
+        x = -677.0
+        y = -221.0
+        z = 3.0
